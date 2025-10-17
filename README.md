@@ -1,2 +1,3 @@
 # mi_codes
-Here lies all the codes that I made in my coding adventure as a beginner.
+Here lies all mi codes that mi made in mi coding adventure as a beginner.
+Remember mi beginner!!
