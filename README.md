@@ -1,3 +1,214 @@
 # mi_codes
 Here lies all mi codes that mi made in mi coding adventure as a beginner.
 Remember mi beginner!!
+
+C++ Developer Roadmap
+
+- Introduction to Language
+  - What is C++?
+  - Why use C++?
+  - C vs C++
+
+- Setting up
+- Basic Operations
+  - Arithmetic Operators
+  - Logical Operators
+  - Bitwise Operators
+- Control Flow & Statements
+  - if else/ switch/ goto
+  - for/ while/ do while loops
+- Functions
+  - Operator Overloading
+  - Lambdas
+  - Static Polymorphism
+  - Function Overloading
+- Data Types
+  - Static Typing
+  - Dynamic Typing
+  - RTTI
+- Pointers and Reference
+  - References
+  - Memory Model
+  - Lifetime of Objects
+  - Smart Pointers
+    - weak_ptr
+    - shared_ptr
+    - unique_ptr
+  - Raw Pointers
+    - New/Delete Operators
+    - Memory Leakage
+- Structuring Codebase
+  - Scope
+  - Namespaces
+  - Headers/CPP Files
+  - Forward Declaration
+- Structures and Classes
+  - Object Oriented Programming
+  - Dynamic Polymorphism
+  - Virual Methods
+  - Virtual Tables
+  - Multiple Inheritance
+  - Diamond Inheritance
+  - Rule of Zero, Five, Three
+- Exception Handling
+  - Exit Codes
+  - Exceptions'
+  - Access Violations
+- Language Concepts
+  - auto (Automatic Type Deduction)
+  - Type Casting
+  - static_cast
+  - const_cast
+  - dynamic_cast
+  - reinterpret_cast
+  - Undefined Behavior (UB)
+  - Argument Dependent Lookup (ADL)
+  - Name Mangling
+  - Macros
+- Stabdard Library + STL
+  - Iterators
+  - iostream
+  - Algorithms
+  - Date / Time
+  - Multithreading
+  - Containers
+- Templates
+  - Variadic Templates
+  - Templates Specialization
+  - Full Template Specialization
+  - Partial Template Specialization
+  - Type Traits
+  - SFINAE (Substitution Failure Is Not An Error)
+- Idioms
+  - Non-Copyable / Non-Moveable
+  - Erase-Remove
+  - Copy and Swap
+  - Copy on Write
+  - RAII
+  - Pimpl
+  - CRTP
+- Standards
+  - C++ 11 / 14
+  - C++ 17
+  - C++ 20
+  - Newest
+  - C++ 0x
+- Language Tools
+- Debuggers
+  - Understanding Debugger Messages
+  - Debugging Symbols
+  - WinDBg
+  - GDB
+- Compilers
+  - Compiler Stages
+  - Compilers and Features
+    - C/lang++ / LLVM
+    - Intel C++
+    - MSVS C++
+    - GCC
+    - MinGW
+- Build Systems
+  - CMAKE
+  - Makefile
+  - Ninja
+- Package Managers
+  - vcpkg
+  - Spack
+  - Conan
+  - NuGet
+- Working with Libraries
+  - Library Inclusion
+  - Licensing 
+- Libraries
+  - Boost
+  - OpenCV
+  - POCO
+  - Tensorflow
+  - protobuf
+  - spdlog
+  - gRPC
+  - pybind11
+  - fmt
+  - opencl
+  - ranges_v3
+- Frameworks
+  - gtest / gmock
+  - Qt
+  - Catch2
+  - Orbit Profiler
+  - PyTorch C++
+ 
+BACKEND
+
+- Internet
+  - How does the internet work?
+  - What is HTTP?
+  - What is Domain Name?
+  - What is hosting?
+  - DNS and how it works?
+  - Browsers and how they work?
+- Frontend Basics
+  - HTML
+  - CSS
+  - JavaScript
+- Pick a Backend Language
+  - PHP
+  - Rust
+  - Java
+  - C#
+  - Python *
+  - Ruby
+  - JavaScript *
+  - GO *
+
+Learn one language and build lots of projects before moving on.
+
+- Version Control Systems
+  - Git
+- Repo Hosting Services
+  - GitHub
+  - GitLab
+- Relational Database
+  - Migrations
+  - N+1 Problem
+- Learn about APIs
+  - API Styles
+    - REST
+    - JSON APIs
+    - SOAP
+    - gRPC
+    - GraphQL
+  - Open API Specs
+  - Authentication
+    - JWT
+    - OAuth
+    - Basic Authentication
+    - Token Authentication
+    - Cookie Based Auth
+    - OpenID
+    - SAML
+  - Web Security
+  - Hashing Algorithms
+    - MD5
+    - SHA
+    - scrypt
+    - bcrypt
+    - HTTPS
+    - OWASP Risks
+    - CORS
+    - SSL/TLS
+    - CSP
+    - Server Security
+   
+- Caching
+  - Server Side
+    - Redis
+    - Memcached
+  - HTTP Caching
+- Learn about Web Servers
+  - Nginx
+  - Apache
+  - Caddy
+  - MS IIS
+- ....
+  
