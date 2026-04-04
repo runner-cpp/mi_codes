@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0b141a;
+}
+
+.parallax-viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw; 
+    height: 100%;
+    background-repeat: repeat-x;
+    background-size: 100vw 100%; 
+    background-position: left bottom;
+    animation: scrollLeft linear infinite;
+    will-change: transform;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+.layer-sky { 
+    z-index: 1; 
+    background-image: url('forest_sky.png'); 
+    animation: none; 
+}
+
+.layer-moon { 
+    background-image: url('forest_moon.png'); 
+    z-index: 2; 
+    background-repeat: no-repeat; 
+    background-position: 20% 15% !important; 
+    background-size: 150px auto; 
+    animation: none !important;
+    transform: none !important;
+}
+
+.layer-mountain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200.5vw; 
+    height: 100%;
+    display: flex;
+    animation: scrollMountain 40s linear infinite;
+    will-change: transform;
+    z-index: 3;
+}
+
+.mountain-part {
+    flex: 0 0 100vw; 
+    height: 100%;
+    background-image: url('forest_mountain.png');
+    background-size: 101% 100%; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-right: -2px; 
+}
+
+.mountain-part.flipped {
+    transform: scaleX(-1);
+}
+
+@keyframes scrollMountain {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100vw, 0, 0); }
+}
+
+.layer-back { 
+    z-index: 4; 
+    background-image: url('forest_back.png'); 
+    animation-duration: 40s; 
+}
+
+.layer-mid { 
+    z-index: 5; 
+    background-image: url('forest_mid.png'); 
+    animation-duration: 20s; 
+}
+
+.layer-long { 
+    z-index: 6; 
+    background-image: url('forest_long.png'); 
+    animation-duration: 10s; 
+}
+
+.layer-short { 
+    z-index: 7; 
+    background-image: url('forest_short.png'); 
+    animation-duration: 5s; 
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    text-align: center;
+    pointer-events: none;
+}
+
+.content h1 {
+    font-family: serif;
+    font-size: 6rem;
+    color: white;
+    letter-spacing: 15px;
+    text-shadow: 0 0 30px rgba(0,0,0,0.8), 0 5px 10px rgba(0,0,0,0.5);
+    margin: 0;
+}

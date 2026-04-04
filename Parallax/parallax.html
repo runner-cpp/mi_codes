@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Forest</title>
+    <style>
+        body, html { margin: 0; padding: 0; overflow: hidden; background: #0b141a; }
+        
+        .viewport {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* This is the key: Browser handles the repeating, not us */
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            background-position: 0 bottom;
+            will-change: background-position;
+        }
+
+        .layer-sky { background-image: url('forest_sky.png'); z-index: 1; }
+        .layer-moon { background-image: url('forest_moon.png'); z-index: 2; }
+        .layer-mountain { background-image: url('forest_mountain.png'); z-index: 3; }
+        .layer-back { background-image: url('forest_back.png'); z-index: 4; }
+        .layer-mid { background-image: url('forest_mid.png'); z-index: 5; }
+        .layer-long { background-image: url('forest_long.png'); z-index: 6; }
+        .layer-short { background-image: url('forest_short.png'); z-index: 7; }
+
+        .content {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-family: serif;
+            font-size: 5rem;
+            letter-spacing: 15px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="viewport">
+    <div class="layer layer-sky" data-speed="0.2"></div>
+    <div class="layer layer-moon"></div>
+    <div class="layer layer-mountain" data-speed="1"></div>
+    <div class="layer layer-back" data-speed="2"></div>
+    <div class="layer layer-mid" data-speed="4"></div>
+    <div class="layer layer-long" data-speed="8"></div>
+    <div class="layer layer-short" data-speed="15"></div>
+
+    <div class="content"><h1>DEATH</h1></div>
+</div>
+
+<script>
+    const layers = document.querySelectorAll('.layer');
+    let xPositions = Array.from(layers).map(() => 0);
+
+    function animate() {
+        layers.forEach((layer, i) => {
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            
+            xPositions[i] -= speed;
+            
+            layer.style.backgroundPosition = `${xPositions[i]}px bottom`;
+        });
+        
+        requestAnimationFrame(animate);
+    }
+
+    window.onload = animate;
+</script>
+
+</body>
+</html>
